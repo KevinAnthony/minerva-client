@@ -35,7 +35,7 @@ func (s HTTPServer) Run() {
 	svr := &native.Server{
 		Addr:              ":8080",
 		Handler:           s.mux,
-		ReadHeaderTimeout: 5 * time.Second, //TODO make configurable
+		ReadHeaderTimeout: 5 * time.Second, // TODO make configurable
 	}
 
 	svr.SetKeepAlivesEnabled(false)
